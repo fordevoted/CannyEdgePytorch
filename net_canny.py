@@ -5,7 +5,9 @@ from scipy.signal import gaussian
 
 
 class Net(nn.Module):
-        def __init__(self, threshold=800.0, use_cuda=False):
+        def __init__(self, threshold=2.0, use_cuda=False):
+        # recommend threshold: 2. for image range[0, 1]
+        # recommend threshold: 800.0 for image range[0, 255]
         super(Canny, self).__init__()
 
         self.threshold = threshold
