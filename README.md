@@ -1,4 +1,10 @@
 # CannyEdgePytorch
+fork from [DCurro](https://github.com/DCurro/CannyEdgePytorch), and add batch version
+
+## Contribution
+* support batch size >=1
+
+
 
 Uses PyTorch 0.4.1 and Python 3.7 (but probably works with 2.7 also).
 
