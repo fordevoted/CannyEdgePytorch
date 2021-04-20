@@ -84,6 +84,8 @@ class Net(nn.Module):
             raise ValueError("length of image shape should be 4, that is, image shape should be (N, C, H, W)!")
         if img.shape[1] != 3:
             img = img.repeat(1, 3, 1, 1)
+            if img.shape[1] != 3:
+                raise ValueError("Channel of image should be 1 or 3")
         batch_size = img.shape[0]
         img_r = img[:, 0:1]
         img_g = img[:, 1:2]
