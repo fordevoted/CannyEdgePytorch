@@ -80,6 +80,10 @@ class Net(nn.Module):
         self.directional_filter.bias.data.copy_(torch.from_numpy(np.zeros(shape=(all_filters.shape[0],))))
 
     def forward(self, img):
+        if img.shape.__len__() != 4:
+            raise ValueError("length of image shape should be 4, that is, image shape should be (N, C, H, W)!")
+        if img.shape[1] != 3:
+            img = img.repeat(1, 3, 1, 1)
         batch_size = img.shape[0]
         img_r = img[:, 0:1]
         img_g = img[:, 1:2]
