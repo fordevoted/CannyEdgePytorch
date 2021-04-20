@@ -2,7 +2,7 @@
 fork from [DCurro](https://github.com/DCurro/CannyEdgePytorch), and modify to supprot batch size > 1
 
 ## Contribution
-* modify netcanny.py that support batch size >=1.
+* modify netcanny.py(**NOT .pyc**) that support batch size >=1. 
 
 
 
